@@ -56,6 +56,19 @@ public class EventsController {
         return Event.EVENTS;
     }
 
+    @RequestMapping("/events/search")
+    public ArrayList<Event> searchEvent(@RequestParam(value="key") String key) {
+        ArrayList<Event> fits = new ArrayList<Event>();
+        int n = 0;
+
+        for (Event e: Event.EVENTS) {
+            if (e.name.contains(key))
+                fits.add(n++, e);
+        }
+
+        return fits;
+    }
+
 
    // @RequestMapping("events/view")
     //public
