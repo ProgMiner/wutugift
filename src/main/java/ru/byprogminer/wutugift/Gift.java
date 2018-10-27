@@ -2,7 +2,7 @@ package ru.byprogminer.wutugift;
 
 import java.util.ArrayList;
 
-public class Gift {
+public class Gift implements Comparable<Gift> {
 
     public static ArrayList GIFTS = new ArrayList<Gift>();
     public static int counter;
@@ -22,5 +22,11 @@ public class Gift {
     public void plus() { rating++; }
     public void minus() { rating--; }
     public String toString() { return name+" "+rating; }
+
+    public int compareTo(Gift that) {
+        if (this.getRating()<that.getRating()) return -1;
+        if (this.getRating()==that.getRating()) return 0;
+        return 1;
+    }
 
 }

@@ -6,6 +6,7 @@ import java.util.Set;
 public class AbstractEvent {
 
     public static int counter = 0;
+    public static ArrayList EVENTS = new ArrayList<AbstractEvent>();
 
     public String name;
     public Set gifts;

@@ -5,13 +5,17 @@ import java.util.TreeSet;
 
 public class GeneralEvent extends AbstractEvent {
 
-    public final String name;
-    public final int id;
+    // public final String name;
+    // public final int id; // ???
 
     GeneralEvent(String name) {
         this.name = name;
         gifts = new TreeSet<Gift>();
         this.id = counter++;
+        EVENTS.add(this.id, this);
+    }
+    public String toString() {
+        return name;
     }
 
 
