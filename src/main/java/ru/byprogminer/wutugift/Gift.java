@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Gift implements Comparable<Gift> {
 
-    public static ArrayList GIFTS = new ArrayList<Gift>();
+    public static ArrayList <Gift> GIFTS = new ArrayList<Gift>();
     public static int counter;
 
     public String name;
@@ -24,8 +24,11 @@ public class Gift implements Comparable<Gift> {
     public String toString() { return name+" "+rating; }
 
     public int compareTo(Gift that) {
-        if (this.getRating()<that.getRating()) return -1;
-        if (this.getRating()==that.getRating()) return 0;
+        if (this.getRating() < that.getRating()) return -1;
+        if (this.getRating() == that.getRating()) {
+            if (this.id<that.id) return -1;
+            if (this.id==that.id) return 0;
+        }
         return 1;
     }
 

@@ -1,15 +1,11 @@
 package ru.byprogminer.wutugift;
 
-import java.util.Date;
-import java.util.HashSet;
 import java.util.TreeSet;
 
-public class CalendarEvent extends AbstractEvent {
+public class CalendarEvent extends Event {
 
     public final int day;
     public final int month;
-    public final String name;
-    public final int id;
 
     CalendarEvent(String name, int day, int month) {
         this.name = name;
@@ -22,6 +18,6 @@ public class CalendarEvent extends AbstractEvent {
     public int getDay() { return day; }
     public int getMonth() { return month; }
     public String toString() {
-        return name + " " + day + "/" + month;
+        return name + " " + day + "-" + month;
     }
 }

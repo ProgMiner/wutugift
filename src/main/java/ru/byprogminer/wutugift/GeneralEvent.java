@@ -1,9 +1,8 @@
 package ru.byprogminer.wutugift;
 
-import java.util.HashSet;
 import java.util.TreeSet;
 
-public class GeneralEvent extends AbstractEvent {
+public class GeneralEvent extends Event {
 
     // public final String name;
     // public final int id; // ???

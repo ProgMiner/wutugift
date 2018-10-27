@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="52f8a3ba-2c0b-4b1c-a70e-49ea85489ed9" name="Default Changelist" comment="Basic: events and gifts">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/byprogminer/wutugift/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/byprogminer/wutugift/AbstractEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/byprogminer/wutugift/AbstractEvent.java" afterDir="false" />
+    <list default="true" id="52f8a3ba-2c0b-4b1c-a70e-49ea85489ed9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/byprogminer/wutugift/AbstractEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/byprogminer/wutugift/Event.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/byprogminer/wutugift/CalendarEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/byprogminer/wutugift/CalendarEvent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/byprogminer/wutugift/EventsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/byprogminer/wutugift/EventsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/byprogminer/wutugift/GeneralEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/byprogminer/wutugift/GeneralEvent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/byprogminer/wutugift/Gift.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/byprogminer/wutugift/Gift.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/byprogminer/wutugift/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/byprogminer/wutugift/Test.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,13 +37,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="4162" />
+          <entry key="java" value="4903" />
           <entry key="txt" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4162" />
+          <entry key="JAVA" value="4903" />
           <entry key="PLAIN_TEXT" value="23" />
         </counts>
       </usages-collector>
@@ -61,8 +61,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/byprogminer/wutugift/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="24" column="6" lean-forward="true" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
+            <state relative-caret-position="306">
+              <caret line="18" column="6" lean-forward="true" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -73,19 +73,24 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/byprogminer/wutugift/EventsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="46" column="6" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
+            <state relative-caret-position="80">
+              <caret line="49" column="48" selection-start-line="49" selection-start-column="48" selection-end-line="49" selection-end-column="48" />
+              <folding>
+                <element signature="e#1905#1906#0" expanded="true" />
+                <element signature="e#1939#1940#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/byprogminer/wutugift/AbstractEvent.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/byprogminer/wutugift/Event.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+            <state relative-caret-position="204">
+              <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#215#230#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -94,10 +99,9 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/byprogminer/wutugift/GeneralEvent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+            <state relative-caret-position="136">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="e#388#389#0" expanded="true" />
                 <element signature="e#415#416#0" expanded="true" />
               </folding>
@@ -108,8 +112,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/byprogminer/wutugift/CalendarEvent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+            <state relative-caret-position="-42">
+              <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
               <folding>
                 <element signature="e#623#624#0" expanded="true" />
                 <element signature="e#676#677#0" expanded="true" />
@@ -121,8 +125,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/byprogminer/wutugift/Gift.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+            <state relative-caret-position="264">
+              <caret line="31" column="17" lean-forward="true" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+              <folding>
+                <element signature="e#168#174#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -137,11 +144,12 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/java/ru/byprogminer/wutugift/GeneralGift.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/byprogminer/wutugift/AbstractGift.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/byprogminer/wutugift/AbstractEvent.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/byprogminer/wutugift/Gift.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/byprogminer/wutugift/Test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/byprogminer/wutugift/GeneralEvent.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/byprogminer/wutugift/CalendarEvent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/byprogminer/wutugift/AbstractEvent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/byprogminer/wutugift/Event.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/byprogminer/wutugift/GeneralEvent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/byprogminer/wutugift/Gift.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/byprogminer/wutugift/EventsController.java" />
       </list>
     </option>
@@ -226,7 +234,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540665164783" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540670349654" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
@@ -278,7 +286,7 @@
       <option name="presentableId" value="Default" />
       <updated>1540634222607</updated>
       <workItem from="1540634223753" duration="645000" />
-      <workItem from="1540658138720" duration="5776000" />
+      <workItem from="1540658138720" duration="10257000" />
     </task>
     <task id="LOCAL-00001" summary="Basic: events and gifts">
       <created>1540650202288</created>
@@ -287,11 +295,18 @@
       <option name="project" value="LOCAL" />
       <updated>1540650202288</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Basic: events and gifts">
+      <created>1540665237208</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1540665237209</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16710000" />
+    <option name="totallyTimeSpent" value="21191000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -317,9 +332,9 @@
       <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Java Enterprise" order="0" />
       <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.4762684" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.3289689" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.37315875" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.3289689" />
@@ -327,7 +342,7 @@
       <window_info anchor="bottom" id="Spring" order="9" weight="0.32994923" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.3289689" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50075644" side_tool="true" weight="0.3289689" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="12" sideWeight="0.49924356" visible="true" weight="0.3289689" />
+      <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.49924356" weight="0.3289689" />
       <window_info anchor="right" id="Bean Validation" order="0" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -349,6 +364,18 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Basic: events and gifts" />
     <option name="LAST_COMMIT_MESSAGE" value="Basic: events and gifts" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/byprogminer/wutugift/EventsController.java</url>
+          <line>49</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/spring-config.xml">
@@ -391,10 +418,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/byprogminer/wutugift/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="6" lean-forward="true" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/byprogminer/wutugift/Event.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#215#230#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/byprogminer/wutugift/Gift.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="31" column="17" lean-forward="true" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+          <folding>
+            <element signature="e#168#174#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/byprogminer/wutugift/CalendarEvent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+        <state relative-caret-position="-42">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
           <folding>
             <element signature="e#623#624#0" expanded="true" />
             <element signature="e#676#677#0" expanded="true" />
@@ -404,47 +462,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/byprogminer/wutugift/GeneralEvent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#388#389#0" expanded="true" />
             <element signature="e#415#416#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/byprogminer/wutugift/AbstractEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/byprogminer/wutugift/Gift.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/byprogminer/wutugift/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="24" column="6" lean-forward="true" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/byprogminer/wutugift/EventsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="46" column="6" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
+        <state relative-caret-position="80">
+          <caret line="49" column="48" selection-start-line="49" selection-start-column="48" selection-end-line="49" selection-end-column="48" />
+          <folding>
+            <element signature="e#1905#1906#0" expanded="true" />
+            <element signature="e#1939#1940#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

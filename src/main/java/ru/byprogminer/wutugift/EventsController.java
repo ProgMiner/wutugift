@@ -1,18 +1,14 @@
 package ru.byprogminer.wutugift;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Date;
-import java.util.concurrent.atomic.AtomicLong;
+import java.util.ArrayList;
 
 
 @RestController()
 public class EventsController {
-    //private static GeneralEvent hui = new GeneralEvent("hui");
-    //private static String h = hui.toString();
 
     @RequestMapping("/HUI")
     public GeneralEvent huihui(@RequestParam(value="name",defaultValue = "hui") String name) {
@@ -32,8 +28,8 @@ public class EventsController {
 
     @RequestMapping("/gifts/add")
     public int addGift(@RequestParam(value="name") String name, @RequestParam(value="id") int id) {
-        AbstractEvent event = (AbstractEvent)AbstractEvent.EVENTS.get(id);
-        id = event.addGift(new Gift("name"));
+        Event event = (Event) Event.EVENTS.get(id);
+        id = event.addGift(new Gift(name));
         return id;
     }
 
@@ -42,6 +38,24 @@ public class EventsController {
         Gift g = (Gift) Gift.GIFTS.get(id);
         g.plus();
     }
+
+    @RequestMapping("/gifts/downvote")
+    public void downvote(@RequestParam(value = "id") int id) {
+        Gift g = (Gift) Gift.GIFTS.get(id);
+        g.minus();
+    }
+
+    @RequestMapping("/events/get")
+    public Event getEvent(@RequestParam(value="id") int id) {
+        Event ev = (Event) Event.EVENTS.get(id);
+        return ev;
+    }
+
+    @RequestMapping("/")
+    public ArrayList<Event> allEvents() {
+        return Event.EVENTS;
+    }
+
 
    // @RequestMapping("events/view")
     //public
