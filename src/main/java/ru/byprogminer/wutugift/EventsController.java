@@ -32,13 +32,19 @@ public class EventsController {
     }
 
     @PostMapping("add/submit/general")
-    public RedirectView addSubmitGeneral(@ModelAttribute GeneralEvent event) {
-        return new RedirectView("/event/" + event.id);
+    public RedirectView addSubmitGeneral(String name, String description) {
+        GeneralEvent e = new GeneralEvent(name);
+        e.description = description;
+
+        return new RedirectView("/event/" + e.id);
     }
 
     @PostMapping("add/submit/calendar")
-    public RedirectView addSubmitCalendar(@ModelAttribute CalendarEvent event) {
-        return new RedirectView("/event/" + event.id);
+    public RedirectView addSubmitCalendar(String name, String description, int day, int month) {
+        CalendarEvent e = new CalendarEvent(name, day, month);
+        e.description = description;
+
+        return new RedirectView("/event/" + e.id);
     }
 
     @RequestMapping("event/{id}")

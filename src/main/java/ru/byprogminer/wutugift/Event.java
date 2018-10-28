@@ -6,7 +6,7 @@ import java.util.NavigableSet;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class Event {
+public abstract class Event {
 
     public final static ArrayList <Event> EVENTS = new ArrayList<>();
     public static int counter = 0;
