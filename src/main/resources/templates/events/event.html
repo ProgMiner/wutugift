@@ -14,18 +14,19 @@
 
         <div class="gift">
             <h2>Add gift</h2>
-            <form th:action="'/gifts/add/' + ${event.id}" method="post">
+            <form th:action="'/gifts/add/' + ${event.id}" method="post" class="form">
                 <label for="name">Gift name: <input id="name" type="text" name="name"></label>
+                <label for="description">Gift description: <textarea id="description" name="description"></textarea></label>
                 <label><input type="submit"></label>
             </form>
         </div>
 
-        <div th:each="gift : ${event.gifts}" class="gift">
+        <div th:each="gift : ${event.getGifts(sorting)}" class="gift">
             <a th:name="'gift' + ${gift.id}"><h2 th:text="${gift.name}"></h2></a>
             <p th:text="${gift.description}"></p>
             <div class="gift-vote">
                 <a th:href="@{/gift/{id}/minus(id=${gift.id})}">&downarrow;</a>
-                <span th:text="${gift.rating}"></span>
+                <span th:text="${gift.votes}"></span>
                 <a th:href="@{/gift/{id}/plus(id=${gift.id})}">&uparrow;</a>
             </div>
         </div>
