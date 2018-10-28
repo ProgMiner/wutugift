@@ -104,10 +104,11 @@ public class EventsController {
     }
 
     @PostMapping("gifts/add/{id}")
-    public RedirectView giftsAdd(@RequestParam(value = "name") String name, @PathVariable("id") int eventId) {
+    public RedirectView giftsAdd(@RequestParam("name") String name, @RequestParam("description") String description, @PathVariable("id") int eventId) {
         int id = gifts.size();
 
         Gift gift = new Gift(id, eventId, name, eventId);
+        gift.setDescription(description);
         gifts.add(gift);
 
         Event event = events.get(eventId);
@@ -119,10 +120,11 @@ public class EventsController {
     @GetMapping("gift/{id}/plus")
     public RedirectView methodGiftPlus(@PathVariable("id") int id) {
         Gift g = gifts.get(id);
-        g.voteUp();
 
         Event e = events.get(g.getEventId());
-        e.refreshGift(g);
+        e.removeGift(g);
+        g.voteUp();
+        e.addGift(g);
 
         return new RedirectView("/event/" + g.getEventId() + "#gift" + id);
     }
@@ -130,10 +132,11 @@ public class EventsController {
     @GetMapping("gift/{id}/minus")
     public RedirectView methodGiftMinus(@PathVariable("id") int id) {
         Gift g = gifts.get(id);
-        g.voteDown();
 
         Event e = events.get(g.getEventId());
-        e.refreshGift(g);
+        e.removeGift(g);
+        g.voteDown();
+        e.addGift(g);
 
         return new RedirectView("/event/" + g.getEventId() + "#gift" + id);
     }

@@ -13,7 +13,13 @@ public abstract class Event implements Comparable <Event> {
     private String description;
     private long views = 0;
 
-    private final TreeSet <Gift> ratingGifts = new TreeSet<>();
+    private final TreeSet <Gift> ratingGifts = new TreeSet<>((a, b) -> {
+        if (a.getVotes() == b.getVotes()) {
+            return a.compareTo(b);
+        }
+
+        return b.getVotes() - a.getVotes();
+    });
     private final TreeSet <Gift> datingGifts = new TreeSet<>();
 
     public Event(int id, String name) {
@@ -51,11 +57,6 @@ public abstract class Event implements Comparable <Event> {
     public void addGift(Gift gift) {
         ratingGifts.add(gift);
         datingGifts.add(gift);
-    }
-
-    public void refreshGift(Gift gift) {
-        ratingGifts.remove(gift);
-        ratingGifts.add(gift);
     }
 
     public void removeGift(Gift gift) {
