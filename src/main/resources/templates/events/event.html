@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="general::template(~{::title}, ~{::#main})">
+<head>
+    <title th:text="'&quot;' + ${event.name} + '&quot; event / wutugift'"></title>
+</head>
+<body>
+    <div id="main">
+        <div th:replace="header"></div>
+
+        <div class="event">
+            <h2 th:text="'&quot;' + ${event.name} + '&quot; event'"></h2>
+            <p th:text="${event.description}"></p>
+        </div>
+
+        <div class="gift">
+            <h2>Add gift</h2>
+            <form th:action="'/gifts/add/' + ${event.id}" method="post">
+                <label for="name">Gift name: <input id="name" type="text" name="name"></label>
+                <label><input type="submit"></label>
+            </form>
+        </div>
+
+        <div th:each="gift : ${event.gifts}" class="gift">
+            <a th:name="'gift' + ${gift.id}"><h2 th:text="${gift.name}"></h2></a>
+            <p th:text="${gift.description}"></p>
+            <div class="gift-vote">
+                <a th:href="@{/gift/{id}/minus(id=${gift.id})}">&downarrow;</a>
+                <span th:text="${gift.rating}"></span>
+                <a th:href="@{/gift/{id}/plus(id=${gift.id})}">&uparrow;</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

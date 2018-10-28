@@ -8,12 +8,15 @@ public class Gift implements Comparable<Gift> {
     public static int counter;
 
     public String name;
+    public String description;
     int rating;
+    public final int eventId;
     public final int id;
 
-    public Gift(String name) {
-        this.name = name;
+    public Gift(String name, int eventId) {
         this.id = counter++;
+        this.eventId = eventId;
+        this.name = name;
         GIFTS.add(this.id, this);
     }
 
@@ -24,12 +27,10 @@ public class Gift implements Comparable<Gift> {
     public String toString() { return name+" "+rating; }
 
     public int compareTo(Gift that) {
-        if (this.getRating() < that.getRating()) return -1;
-        if (this.getRating() == that.getRating()) {
-            if (this.id<that.id) return -1;
-            if (this.id==that.id) return 0;
+        if (this.rating == that.rating) {
+            return that.id - this.id;
         }
-        return 1;
-    }
 
+        return that.rating - this.rating;
+    }
 }

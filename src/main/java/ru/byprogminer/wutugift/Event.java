@@ -29,6 +29,6 @@ public class Event {
         gifts.add(g);
         return g.id;
     }
-    public void removeGift(int id) { gifts.remove(id); }
+    public void removeGift(int id) { gifts.remove(Gift.GIFTS.get(id)); }
 
 }

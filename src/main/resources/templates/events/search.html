@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="general::template(~{::title}, ~{::#main})">
+<head>
+    <title th:text="'Search by &quot;' + ${query} + '&quot; / wutugift'"></title>
+</head>
+<body>
+    <div id="main">
+        <div th:replace="header"></div>
+
+        <h2 th:text="'Search by &quot;' + ${query} + '&quot;'"></h2>
+
+        <div th:each="event : ${events}" class="event">
+            <h2 th:text="${event.name} + ' event'"></h2>
+            <p th:text="${event.description}"></p>
+            <div style="text-align: right;">
+                <a th:href="@{/event/{id}(id=${event.id})}">Go to</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

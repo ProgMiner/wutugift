@@ -1,5 +1,7 @@
 <div id="header" xmlns:th="http://www.thymeleaf.org">
-    <div id="logo">wutugift</div>
-    <div th:replace="search"></div>
-    <div th:replace="add-event"></div>
+    <a href="/"><div id="logo">wutugift</div></a>
+    <div id="sub-header">
+        <div th:replace="add-event"></div>
+        <div th:replace="search"></div>
+    </div>
 </div>

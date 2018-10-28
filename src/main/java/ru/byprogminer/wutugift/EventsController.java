@@ -42,9 +42,12 @@ public class EventsController {
     }
 
     @RequestMapping("event/{id}")
-    public Event event(@PathVariable("id") int id) {
-        Event ev = Event.EVENTS.get(id);
-        return ev;
+    public ModelAndView event(@PathVariable("id") int id) {
+        Event e = Event.EVENTS.get(id);
+        HashMap <String, Object> model = new HashMap<>();
+        model.put("event", e);
+
+        return new ModelAndView("events/event", model);
     }
 
     @RequestMapping(value = "event/{id}/image", produces = MediaType.IMAGE_PNG_VALUE)
@@ -53,33 +56,48 @@ public class EventsController {
     }
 
     @RequestMapping("search")
-    public ArrayList<Event> search(@RequestParam("query") String query) {
-        ArrayList <Event> fits = new ArrayList<>();
+    public ModelAndView search(@RequestParam("query") String query) {
+        ArrayList <Event> events = new ArrayList<>();
 
         for (Event e: Event.EVENTS) {
             if (e.name.contains(query))
-                fits.add(e);
+                events.add(e);
         }
 
-        return fits;
+        HashMap <String, Object> model = new HashMap<>();
+        model.put("events", events);
+        model.put("query", query);
+
+        return new ModelAndView("events/search", model);
     }
 
-    @PostMapping("method/event/{id}/gifts/add")
-    public int methodEventGiftsAdd(@RequestParam(value="name") String name, @PathVariable("id") int postId) {
-        Event event = Event.EVENTS.get(postId);
-        int id = event.addGift(new Gift(name));
-        return id;
+    @PostMapping("gifts/add/{id}")
+    public RedirectView giftsAdd(@RequestParam(value="name") String name, @PathVariable("id") int eventId) {
+        Event event = Event.EVENTS.get(eventId);
+        int id = event.addGift(new Gift(name, eventId));
+
+        return new RedirectView("/event/" + eventId + "#gift" + id);
     }
 
-    @PostMapping("method/gift/{id}/plus")
-    public void methodGiftPlus(@PathVariable("id") int id) {
+    @GetMapping("gift/{id}/plus")
+    public RedirectView methodGiftPlus(@PathVariable("id") int id) {
         Gift g = Gift.GIFTS.get(id);
+        Event e = Event.EVENTS.get(g.eventId);
+        e.gifts.remove(g);
         g.plus();
+        e.gifts.add(g);
+
+        return new RedirectView("/event/" + g.eventId + "#gift" + id);
     }
 
-    @PostMapping("method/gift/{id}/minus")
-    public void methodGiftMinus(@PathVariable("id") int id) {
+    @GetMapping("gift/{id}/minus")
+    public RedirectView methodGiftMinus(@PathVariable("id") int id) {
         Gift g = Gift.GIFTS.get(id);
+        Event e = Event.EVENTS.get(g.eventId);
+        e.gifts.remove(g);
         g.minus();
+        e.gifts.add(g);
+
+        return new RedirectView("/event/" + g.eventId + "#gift" + id);
     }
 }
