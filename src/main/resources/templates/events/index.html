@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="general::template(~{::title}, ~{::#main})">
+<head>
+    <title>wutugift</title>
+</head>
+<body>
+    <div id="main">
+        <div id="big-logo"><span>wutugift</span></div>
+        <div id="main-header">
+            <div th:replace="search"></div>
+            <div th:replace="add-event"></div>
+        </div>
+        <div id="events">
+            <div>
+                <table>
+                    <tr>
+                        <th>General events</th>
+                    </tr>
+                    <tr th:each="event : ${general}">
+                        <td><a th:href="@{/event/{id}(id = ${event.id})}" th:text="${event.name}"></a></td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <table>
+                    <tr>
+                        <th>Calendar events</th>
+                    </tr>
+                    <tr th:each="event : ${calendar}">
+                        <td><a th:href="@{/event/{id}(id = ${event.id})}" th:text="${event.name}"></a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

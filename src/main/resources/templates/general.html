@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:fragment="template(title, main)">
+<head>
+    <meta charset="UTF-8">
+    <title th:replace="${title}">wutugift</title>
+    <link href="/assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div id="main" th:replace="${main}"></div>
+    <div id="footer">
+        &copy; бАнальная мощ 2018
+    </div>
+</body>
+</html>
