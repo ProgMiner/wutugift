@@ -1,21 +1,18 @@
 package ru.byprogminer.wutugift;
 
-import java.util.TreeSet;
+import java.util.ArrayList;
 
 public class GeneralEvent extends Event {
 
-    // public final String name;
-    // public final int id; // ???
+    public final static ArrayList<GeneralEvent> GENERAL_EVENTS = new ArrayList<>();
 
-    GeneralEvent(String name) {
-        this.name = name;
-        gifts = new TreeSet<Gift>();
-        this.id = counter++;
-        EVENTS.add(this.id, this);
+    public GeneralEvent(String name) {
+        super(name);
+
+        GENERAL_EVENTS.add(this);
     }
+
     public String toString() {
         return name;
     }
-
-
 }
